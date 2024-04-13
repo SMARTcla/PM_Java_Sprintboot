@@ -1,6 +1,6 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5433/
-    username: #localsecrets
-    password: #localsecrets
+    url: #create_own_file_readme
+    username: #create_own_file_readme
+    password: #create_own_file_readme

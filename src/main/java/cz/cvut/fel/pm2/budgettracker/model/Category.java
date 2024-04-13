@@ -11,9 +11,6 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "category")
-@NamedQueries({@NamedQuery(name = "findCategoryByName",
-        query = "SELECT c FROM Category c WHERE c.name = :name "),
-        @NamedQuery(name = "updateCategoryByName", query = "UPDATE Category c set c.name =: name where c.name=: name")})
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

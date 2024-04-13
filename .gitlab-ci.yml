@@ -1,0 +1,28 @@
+image: maven:3.8-openjdk-17
+
+stages:
+  - build
+  - test
+#   - quality
+
+cache:
+  paths:
+    - .m2/repository
+
+build:
+  stage: build
+  script:
+    - mvn compile
+
+test:
+  stage: test
+  script:
+    - mvn test
+
+# quality:
+#   stage: quality
+#   script:
+#     - mvn sonar:sonar -Dsonar.projectKey=my_project_key -Dsonar.host.url= -Dsonar.login=
+#   only:
+#     - merge_requests
+#     - master
